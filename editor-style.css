@@ -1,0 +1,49 @@
+/* Google font api */
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans|Quattrocento');
+
+html  .mcecontentbody {
+	max-width: 850px;
+}
+
+*  {
+	font:  16px/1.625 'Quattrocento', serif;
+}
+
+#wp-fullscreen-title {
+	font:  small-caps 38px 'Quattrocento', serif;
+	letter-spacing: 0.2em;
+}
+
+a {
+	color: #ff6700;
+}
+
+.mcecontentbody blockquote {
+	font: italic bold 16px 'Quattrocento', serif;
+}
+
+.mcecontentbody cite,
+.mcecontentbody blockquote cite {
+	font: italic small-caps 14px 'Quattrocento', serif;
+	text-transform: none;
+	text-align: right;
+	display: block;
+	margin-top: .5em;
+}
+cite::before {
+	content: "\2014\ "; /* emdash */
+}
+
+.wp-caption {
+	background: none;
+	padding: 0;
+	max-width: 100%;
+	margin-bottom: 1em;
+}
+.wp-caption img {
+	max-width: 100%;
+	margin: 0 !important;
+}
+dd.wp-caption-dd {
+	padding: 0;
+}

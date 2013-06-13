@@ -1,0 +1,700 @@
+/*
+ * Theme Name: Point and Frame 2011
+ * Theme URI:
+ * Description: Child theme for TwentyEleven
+ * Author: Sam Britt
+ * Author URI: http://pointandframe.com/
+ * Template: twentyeleven
+ * Version: 1.0
+ * Tags: twentyeleven
+ */
+
+/* parent theme */
+@import url('../twentyeleven/style.css');
+
+/* Google font api */
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans|Quattrocento');
+
+/* Page Layout { */
+	body {
+		background: #2b2b2b;
+		padding: 0 10px;
+		font:  16px/1.625 'Quattrocento', serif;
+	}
+
+	.one-column #page {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		max-width: 1000px;
+
+		/* drop shadow */
+		box-shadow: 0 0 8px 1px black;
+		-moz-box-shadow: 0 0 8px 1px black;
+		-webkit-box-shadow: 0 0 8px 1px black;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='black')";
+		filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='black');
+	}
+
+	.one-column #content {
+		/* 1000px #page width with 7.5% margin leaves 850px main image
+		 * size */
+		margin: 0 7.5%;
+	}
+
+	#main {
+		/* space before main content begins */
+		padding-top: 20px;
+	}
+
+	/* Portfolio page: remove page title */
+	/* article#post-553 header.entry-header {
+	 *     display: none;
+	 * } */
+/* } */
+
+/* Fonts, etc { */
+	.entry-title,
+	.singular .entry-title {
+		font: small-caps normal 42px/1 'Quattrocento', serif;
+		letter-spacing: 0.2em;
+	}
+
+	.entry-meta a {
+		font-weight: normal;
+	}
+
+    .entry-content blockquote {
+		font: italic bold 16px 'Quattrocento', serif;
+	}
+
+	.entry-content cite,
+	.entry-content blockquote cite {
+		font: italic small-caps 14px 'Quattrocento', serif;
+		text-transform: none;
+		text-align: right;
+		display: block;
+		margin-top: .5em;
+	}
+	.entry-content cite::before {
+		content: "\2014\ "; /* emdash */
+    }
+
+	/* Subtitles from KIA-Subtitle plugin */
+	h2.subtitle {
+		font-size: 130%;
+		font-variant: small-caps;
+		letter-spacing: 0.1em;
+	}
+/* } */
+
+/* Various positioning { */
+	.cat-links {
+		display: none;
+	}
+
+	footer.entry-meta .sep {
+		display: none;
+	}
+
+	/* move entry-meta below title even for single-post pages */
+	.singular .entry-header .entry-meta {
+		position: relative;
+	}
+
+	.entry-content,
+	.entry-summary {
+		padding-top: 0;
+	}
+
+	/* space under entry header and above entry content */
+	.singular header.entry-header,
+	header.entry-header {
+		margin-bottom: 15px;
+	}
+
+	/* space above and below title */
+	h1.entry-title {
+		padding: 0;
+		line-height: 1;
+	}
+
+
+	/* space between nav and post title */
+	#content nav {
+		padding-bottom: 0;
+	}
+	#content article {
+		padding-top: 10px;
+	}
+
+	.singular .hentry {
+		padding-bottom: 0;
+	}
+
+	/* move edit link to bottom right */
+	.edit-link {
+		width: 100%;
+	}
+
+	.one-column.singular .entry-meta .edit-link a,
+	.singular .edit-link a {
+		position: static;
+		float: right;
+	}
+
+	/* remove weird comment bubble at top of blog posts */
+	header .comments-link {
+		display: none;
+	}
+
+	/* Addthis Plugin */
+	.addthis_button_google_plusone {
+		margin-top: -3px;
+	}
+
+	@media (max-width: 650px) {
+		.addthis_button_google_plusone {
+			margin-top: 0;
+		}
+	}
+
+	/* Sharedaddy (from Jetpack) */
+	div.sharedaddy div.sd-block  {
+		border-top: 0 !important;
+	}
+
+	div.sharedaddy .sd-content {
+		float: left !important;
+	}
+
+/* } */
+
+/* Header Footer { */
+	/* Remove footer */
+	#site-generator {
+		display: none;
+	}
+
+	/* Header and overlay { */
+		#branding {
+			border-top: 0;
+			padding-bottom: 0px;
+		}
+
+		/* remove white line under top header image */
+		/* #branding img { */
+		/* 	margin-bottom: -9px; */
+		/* } */
+
+		div#overlay {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 18%;
+			min-height: 2.5em;
+			bottom: 8%;
+			padding: 0;
+			background: url("img/2x1_black_70pct.png") repeat;
+		}
+
+		div#overlay img {
+			position: absolute;
+			top: 10%; /* equal margins for 80% size */
+			left: 7.6%;
+			height: 80%;
+			width: auto;
+		}
+	/* } */
+
+	/* Random Quotes plugin { */
+		aside#quotescollection p {
+			margin-bottom: 0;
+		}
+		.quotescollection_nextquote a {
+			/* font-weight: normal; */
+			display: none;
+		}
+	/* } */
+
+	/* Footer { */
+	.one-column #nav-below,
+	div #supplementary {
+		border: 0;
+	}
+	.one-column #nav-below {
+		margin-bottom: 0;
+	}
+	/* } */
+/* } Header Footer */
+
+/* Navigation { */
+	/* top navigation bar */
+	#access .current_page_item > a, #access .current_page_ancestor > a {
+		font-weight: normal;
+		color: #ff6700;
+	}
+
+	/* slimmer nav bar */
+	nav#access,
+	nav#access li,
+	nav#access li a {
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 16px;
+		/* height: 40px; */
+		position: static;
+		line-height: 35px; /* for vertical alignment */
+		margin: 0;
+	}
+
+	/* shift nav menu to the left to keep aligned with content, logo */
+	#access ul {
+		margin-left: -1.2125em;
+	}
+
+
+	/* sub menus */
+	#access ul ul a {
+		padding: 0 10px;
+	}
+	nav#access li ul {
+		top: 35px;
+	}
+
+	/* previous/next links */
+	#content #nav-single a,
+	#content #nav-above a,
+	#content #nav-below a {
+		font-weight: normal;
+	}
+
+	#content #nav-single {
+		width: auto;
+	}
+
+	/* Search box { */
+		#branding .with-image
+		#searchform {
+			bottom: -33px;
+			right: 7.6%;
+		}
+
+		input#s {
+			font-family: 'Josefin Sans';
+			font-size: 16px;
+			border-radius: 5px;
+		}
+	/* } */
+
+	/* Menus { */
+		/* hide mobile menu on larger screens */
+		#access li.mobile-menu {
+			display: none;
+		}
+
+		/* Nav menu sprite for social media
+		 * Highly dependent on the html generated by Wordpress, as well as
+		 * setting the proper classes from the Wordpress Menu dashboard
+		 * (you may need to turn on the extra options from the "screen
+		 * options" tab at the top). Taken from
+		 * http://diythemes.com/thesis/rtfm/replace-wp-menu-text-links-image-sprites/
+		 */
+
+		/* this is for a small links to the far right */
+		#access li.menu-icon {
+			float: right;
+		}
+
+		/* set up the sprite for menu icons */
+		#access li.menu-icon a {
+			display: block;
+			height: 20px;
+			width: 20px;
+			padding: 0px;
+			margin-top: 8px;
+			margin-left: 6px;
+			outline: none;
+			border: 0;
+			text-indent: -9999px;
+			background: none;
+			background-image: url('img/nav-sprite.png');
+			/* background-repeat: no-repeat; */
+			/* background-attachment: fixed; */
+		}
+
+		#access li.menu-icon.menu-rss a {
+			background-position: 0 -20px;
+		}
+		#access li.menu-icon.menu-rss a:hover {
+			background-position: 0 0;
+		}
+		#access li.menu-icon.menu-flickr a {
+			background-position: -20px -20px;
+		}
+		#access li.menu-icon.menu-flickr a:hover {
+			background-position: -20px 0;
+		}
+		#access li.menu-icon.menu-google-plus a {
+			background-position: -40px -20px;
+		}
+		#access li.menu-icon.menu-google-plus a:hover {
+			background-position: -40px 0;
+		}
+	/* } */
+/* } */
+
+/* Comments and Resonse Forms { */
+/* labels for form submissions */
+#respond .comment-form-author label, #respond .comment-form-email label, #respond .comment-form-url label, #respond .comment-form-comment label {
+	top: 0;
+	left: 0;
+	padding: 0;
+	font-size: 12px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	min-width: 0; /* for "required" asterisk */
+	color: #888;
+	background: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+
+}
+
+	/* required asterisk */
+	.required,
+	#respond .comment-form-author .required, #respond .comment-form-email .required {
+		font-size: 14px;
+		font-weight: normal;
+		color: #ff6700;
+		/* move to next to label */
+		position: static;
+	}
+
+	/* repsonse box border */
+	#respond input[type="text"],
+	#respond textarea {
+		border: 1px solid #e7e7e7;
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		text-indent: 0;
+	}
+
+	/* small boxes, name email, etc */
+	#respond input[type="text"] {
+		height: 1em;
+	}
+
+	/* big comment box */
+	#respond textarea {
+		height: 5em;
+	}
+
+	/* move post button to the left */
+	#respond .form-submit {
+		float: left;
+	}
+
+	/* "Leave a Reply" or "Post Comment"*/
+	#respond input#submit {
+		position: static;
+		padding: 5px 22px;
+	}
+
+	#respond {
+		background: none;
+		border: 0;
+		padding: 1.625em 0;
+	}
+
+	/*
+	 * Comment List
+	 */
+	#comments-title {
+		padding: 0;
+	}
+
+	/* remove little talk bubble arrow */
+	.commentlist > li::before,
+	.commentlist > li.bypostauthor::before {
+		content: none;
+	}
+
+	/* border below all comments, same as border above each comment */
+	ol.commentlist {
+		border-bottom: 1px solid lightGrey;
+	}
+
+	.commentlist > li.comment {
+		background: none;
+		border: 0;
+		border-top: 1px solid lightGrey;
+		border-radius: 0;
+		-moz-border-radius: 0;
+		font-size: 14px;
+	}
+
+	.commentlist > li.bypostauthor,
+	.commentlist .children > li.bypostauthor {
+		background: #f4f4f4;
+		border: 0;
+	}
+
+	/* link font (username and date) */
+	.comment-meta a {
+		font-weight: normal;
+	}
+/* } Comments */
+
+/* Images { */
+	/* Lightview plugin */
+	/* hide title */
+	.lv_title_caption {
+		display: none !important;
+	}
+
+	/*
+	 * Much of this code was taken from twentyeleven's style.css, then commented,
+	 * then parts were uncommented and modified.
+	 */
+
+	.entry-content img,
+	.comment-content img,
+	.widget img {
+		max-width: 100%; /* Fluid images for posts, comments, and widgets */
+	}
+
+	/* img[class*="align"],
+	 * img[class*="wp-image-"],
+	 * img[class*="attachment-"] {
+	 *         height: auto; [> Make sure images with WordPress-added height and width attributes are scaled correctly <]
+	 * }
+	 */
+
+	img.size-full,
+	img.size-large {
+		max-width: 100%;
+		width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
+		height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+	}
+
+	/*
+	 * .entry-content img.wp-smiley {
+	 *         border: none;
+	 *         margin-bottom: 0;
+	 *         margin-top: 0;
+	 *         padding: 0;
+	 * }
+	 * img.alignleft,
+	 * img.alignright,
+	 * img.aligncenter {
+	 *         margin-bottom: 1.625em;
+	 * }
+	 */
+
+	p img,
+	.wp-caption {
+			margin-top: 0.5em;
+	}
+	.wp-caption {
+		background: none;
+		padding: 0;
+		max-width: 100%;
+		margin-bottom: 1em;
+		/* background: #eee;
+		 * margin-bottom: 1.625em;
+		 * max-width: 96%;
+		 * padding: 9px;
+		 */
+	}
+	.wp-caption img {
+		max-width: 100%;
+		/* display: block; */
+		/* margin: 0 auto; */
+		margin: 0;
+		/* max-width: 98%; */
+	}
+	.wp-caption .wp-caption-text,
+	.gallery-caption {
+		font-family: inherit;
+		/* color: #666; */
+		/* font-family: Georgia, serif; */
+		/* font-size: 12px; */
+	}
+	.wp-caption .wp-caption-text {
+		/* margin-bottom: 0.6em; */
+		/* padding: 10px 0 5px 40px; */
+		padding: 10px 0 0; /* move caption back to left-align */
+		/* position: relative; */
+	}
+	.wp-caption .wp-caption-text:before {
+		display: none; /* get rid of initial "---" in caption */
+		/* color: #666;
+		 * content: '\2014';
+		 * font-size: 14px;
+		 * font-style: normal;
+		 * font-weight: bold;
+		 * margin-right: 5px;
+		 * position: absolute;
+		 * left: 10px;
+		 * top: 7px;
+		 */
+		}
+
+		/*
+		 * #content .gallery {
+		 *         margin: 0 auto 1.625em;
+		 * }
+		 * #content .gallery a img {
+		 *         border: none;
+		 * }
+		 * img#wpstats {
+		 *         display: block;
+		 *         margin: 0 auto 1.625em;
+		 * }
+		 * #content .gallery-columns-4 .gallery-item {
+		 *         width: 23%;
+		 *         padding-right: 2%;
+		 * }
+		 * #content .gallery-columns-4 .gallery-item img {
+		 *         width: 100%;
+		 *         height: auto;
+		 * }
+		 *
+		 */
+
+	/* Image borders */
+
+	img[class*="align"],
+	img.alignright,
+	img.aligncenter,
+	img.alignleft,
+	img.alignnone,
+	img[class*="wp-image-"],
+	#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+		/* border: 1px solid #ddd; */
+		border: 1px solid black;
+		/* padding: 6px; */
+		padding: 0;
+		/* margin: -1px; [> account for border <] */
+	}
+	.wp-caption img {
+		/* border-color: #eee; */
+		border-color: black;
+	}
+	a:focus img[class*="align"],
+	a:hover img[class*="align"],
+	a:active img[class*="align"],
+	a:focus img[class*="wp-image-"],
+	a:hover img[class*="wp-image-"],
+	a:active img[class*="wp-image-"],
+	#content .gallery .gallery-icon a:focus img,
+	#content .gallery .gallery-icon a:hover img,
+	#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
+		/* background: #eee; */
+		/* border-color: #bbb; */
+		border-color: #ff6700;
+	}
+	.wp-caption a:focus img,
+	.wp-caption a:active img,
+	.wp-caption a:hover img {/* ... including captioned images! */
+		/* background: #fff; */
+		/* border-color: #ddd; */
+		border-color: #ff6700;
+	}
+/* } */
+
+div.tiled-gallery,
+div.tiled-gallery .gallery-row {
+	max-width: 100% !important;
+}
+
+
+/* Responsive design { */
+	@media (max-width: 750px) {
+		#branding .with-image #searchform {
+			/* Reduces size of search form and moves it high on small screens
+			 * so it doesn't interfere with nav menu */
+			/*bottom: auto;*/
+			/*top: 0.5em !important;*/
+			top: auto !important;
+			max-width: 100px;
+		}
+
+/*		.one-column.singular .entry-content {
+			width: 300px;
+		}*/
+
+		/* increase the space between menu icons to make more finger-friendly */
+		/*#access li.menu-icon a {
+			margin-left: 10px;
+		}*/
+
+		/* Hide menu. Show mobile menu */
+		#access li.menu-item {
+			display: none;
+		}
+
+		#access li.menu-item.mobile-menu,
+		#access li.menu-item.mobile-menu ul.sub-menu li {
+			display: list-item;
+		}
+
+		/* without this submenus float up */
+		#access ul.sub-menu {
+			top: inherit;
+		}
+
+		/* make sure nav labels don't get pushed down */
+		#branding .only-search + #access div {
+		  padding-right: 0px;
+		}
+
+		/* for some reason, 2011 changes the positioning of the "previous" and
+		 * "next" links to `static`, which makes them non-clickable. Change it
+		 * back to relative */
+		#nav-single {
+			position: relative;
+		}
+
+		/* Adjust page layout to maximize real estate */
+		body {
+			padding: 0;
+		}
+
+		#main #content,
+		#access div {
+			margin: 0 2.6%;
+		}
+
+		div#overlay img {
+			left: 2.6%;
+		}
+
+		/* Adjust fonts */
+		body, input, textarea,
+		nav#access li a {
+		  font-size: 13px;
+		}
+
+		.entry-title,
+		.singular .entry-title {
+		  font-size: 24px;
+		}
+
+		.wp-caption .wp-caption-text,
+		.gallery-caption {
+			font-size: 10px;
+		}
+
+		/* better fit for comment */
+		.one-column .commentlist > li.comment .comment-content {
+		  margin-right: 10%;
+		}
+		.one-column .commentlist > li.comment .comment-meta {
+		  margin-right: 0;
+		}
+	}
+/* } */
+
+  /* vim: set foldmethod=marker foldmarker={,} ts=4 sw=4: */
